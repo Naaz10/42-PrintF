@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_memsize.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nafrin <nafrin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 17:37:23 by nafrin            #+#    #+#             */
-/*   Updated: 2022/11/19 17:37:24 by nafrin           ###   ########.fr       */
+/*   Created: 2022/11/19 17:36:36 by nafrin            #+#    #+#             */
+/*   Updated: 2022/11/19 17:54:00 by nafrin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	my_memsize(void *ptr)
+int	ft_toupper(char c)
 {
-	char	*str;
-	size_t	n;
-
-	n = 0;
-	str = (char *) ptr;
-	while (*str++)
-		n++;
-	return (n);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	else
+		return (c);
 }
